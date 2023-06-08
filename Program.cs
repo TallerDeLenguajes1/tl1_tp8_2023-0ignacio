@@ -7,9 +7,9 @@ StreamWriter sw = new StreamWriter("index.csv");
 foreach (string archivo in archivos)
 {
     cont++;
-    string[] partes = archivo.Split('.');
     string[] partes2 = archivo.Split(@"\");
-    sw.WriteLine(cont+","+partes2[3]+","+partes[1]);
+    string[] partes = partes2[3].Split('.');
+    sw.WriteLine(cont+","+partes[0]+","+partes[1]);
 }
 
 sw.Close();
